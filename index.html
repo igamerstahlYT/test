@@ -37,6 +37,20 @@
                     <div class="maindiv-bg"></div>
                 </div>
             </div>
+
+                
+            <div id="clothesstore-item-torso" class="clothesstore-item-div">
+                <p id="title-torso" class="undertitle">Torso</p>
+                <div class="clothesstore-item-maindiv">
+                    <img class="clothesstore-item-img" src="./img/undershirt.png">
+                    <button onclick="pressButton('left', 'torso')" class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>
+                    <button onclick="pressButton('right', 'torso')" class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>
+                    <input id="clothesstore-item-torso-input" class="clothesstore-item-input" type="number" value=0><asdas id="clothesstore-item-torso-maxinputvalue">/???</asdas>
+                    <br><i onclick="openTextureMenu('Torso')" class="clothesshop-icon fad fa-fill-drip"></i>
+                    <br><i onclick="buyCloth('torso')" class="clothesshop-icon-scnd fas fa-shopping-basket"></i>
+                    <div class="maindiv-bg"></div>
+                </div>
+            </div>
     
             <!--<div id="clothesstore-item-taschen" class="clothesstore-item-div">
                 <p id="title-taschen" class="undertitle">Taschen</p>
@@ -215,14 +229,14 @@
 <script type="text/javascript" src="clothes_male.js"></script>
 <script type="text/javascript" src="clothes_female.js"></script>
 <script>
-    let categories = ["oberbekleidung", "unterbekleidung", "taschen", "accessories", "westen", "hosen", "schuhe", "masken", "hüte", "brillen", "ohrringe", "uhren", "armbänder", "embleme"];
+    let categories = ["oberbekleidung", "unterbekleidung","torso", "taschen", "accessories", "westen", "hosen", "schuhe", "masken", "hüte", "brillen", "ohrringe", "uhren", "armbänder", "embleme"];
     let currentcategory = "main";
 
-    let count_male = { accessories: 0, armbänder: 0, brillen: 0, embleme: 0, hosen: 0, hüte: 0, masken: 0, oberbekleidung: 0, ohrringe: 0, schuhe: 0, taschen: 0, uhren: 0, unterbekleidung: 0, westen: 0 }
-    let count_female = { accessories: 0, armbänder: 0, brillen: 0, embleme: 0, hosen: 0, hüte: 0, masken: 0, oberbekleidung: 0, ohrringe: 0, schuhe: 0, taschen: 0, uhren: 0, unterbekleidung: 0, westen: 0 }
+    let count_male = { accessories: 0, armbänder: 0, brillen: 0, embleme: 0, hosen: 0, hüte: 0, masken: 0, oberbekleidung: 0, ohrringe: 0, schuhe: 0, taschen: 0, uhren: 0, unterbekleidung: 0, torso: 0, westen: 0 }
+    let count_female = { accessories: 0, armbänder: 0, brillen: 0, embleme: 0, hosen: 0, hüte: 0, masken: 0, oberbekleidung: 0, ohrringe: 0, schuhe: 0, taschen: 0, uhren: 0, unterbekleidung: 0, torso: 0, westen: 0 }
 
-    count_male.accessories = count_male.accessories- 1, count_male.armbänder = count_male.armbänder- 1, count_male.brillen = count_male.brillen- 1, count_male.embleme = count_male.embleme- 1, count_male.hosen = count_male.hosen- 1, count_male.hüte = count_male.hüte- 1, count_male.masken = count_male.masken- 1, count_male.oberbekleidung = count_male.oberbekleidung- 1, count_male.ohrringe = count_male.ohrringe- 1, count_male.schuhe = count_male.schuhe- 1, count_male.taschen = count_male.taschen- 1, count_male.uhren = count_male.uhren- 1, count_male.unterbekleidung = count_male.unterbekleidung- 1, count_male.westen = count_male.westen- 1;
-    count_female.accessories = count_female.accessories- 1, count_female.armbänder = count_female.armbänder- 1, count_female.brillen = count_female.brillen- 1, count_female.embleme = count_female.embleme- 1, count_female.hosen = count_female.hosen- 1, count_female.hüte = count_female.hüte- 1, count_female.masken = count_female.masken- 1, count_female.oberbekleidung = count_female.oberbekleidung- 1, count_female.ohrringe = count_female.ohrringe- 1, count_female.schuhe = count_female.schuhe- 1, count_female.taschen = count_female.taschen- 1, count_female.uhren = count_female.uhren- 1, count_female.unterbekleidung = count_female.unterbekleidung- 1, count_female.westen = count_female.westen- 1;
+    count_male.accessories = count_male.accessories- 1, count_male.armbänder = count_male.armbänder- 1, count_male.brillen = count_male.brillen- 1, count_male.embleme = count_male.embleme- 1, count_male.hosen = count_male.hosen- 1, count_male.hüte = count_male.hüte- 1, count_male.masken = count_male.masken- 1, count_male.oberbekleidung = count_male.oberbekleidung- 1, count_male.ohrringe = count_male.ohrringe- 1, count_male.schuhe = count_male.schuhe- 1, count_male.taschen = count_male.taschen- 1, count_male.uhren = count_male.uhren- 1, count_male.unterbekleidung = count_male.unterbekleidung- 1, count_male.torso = count_male.torso- 1, count_male.westen = count_male.westen- 1;
+    count_female.accessories = count_female.accessories- 1, count_female.armbänder = count_female.armbänder- 1, count_female.brillen = count_female.brillen- 1, count_female.embleme = count_female.embleme- 1, count_female.hosen = count_female.hosen- 1, count_female.hüte = count_female.hüte- 1, count_female.masken = count_female.masken- 1, count_female.oberbekleidung = count_female.oberbekleidung- 1, count_female.ohrringe = count_female.ohrringe- 1, count_female.schuhe = count_female.schuhe- 1, count_female.taschen = count_female.taschen- 1, count_female.uhren = count_female.uhren- 1, count_female.unterbekleidung = count_female.unterbekleidung- 1, count_female.torso = count_female.torso- 1, count_female.westen = count_female.westen- 1;
     let gender = 0;
 
     setCount()
@@ -846,5 +860,4 @@
         openClothesMenu(usergender);
     });
 </script>
-
 </html>
